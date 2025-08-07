@@ -3,70 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ette.wtf - Personal website hosting music and content created by me and my significant other">
+    <meta name="keywords" content="music, ette, personal website, soundcloud, spotify">
+    <meta name="author" content="ette">
+    <meta property="og:title" content="ette.wtf">
+    <meta property="og:description" content="Personal website hosting music and content">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ette.wtf">
     <title>ette.wtf</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <div class="ascii">
-                <!-- The ASCII art will be inserted here dynamically -->
+            <div class="ascii" aria-label="Animated ASCII art logo">
             </div>
         </header>
 
-<!-- hiding this for now :3 <aside class="sidebar">
-            <div class="navigation">
-                <h2>navigation:</h2>
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">links</a></li>
-                </ul>
-                
-            </div>
+        <div class="main-container">
+            <nav class="sidebar">
+                <div class="nav-content">
+                    <h2 class="nav-title">navigation</h2>
+                    <ul class="nav-menu">
+                        <li><a href="#welcome" class="nav-link" data-section="welcome">welcome</a></li>
+                        <li><a href="#releases" class="nav-link" data-section="releases">latest releases</a></li>
+                        <li><a href="#soundcloud" class="nav-link" data-section="soundcloud">soundcloud</a></li>
+                        <li><a href="#spotify" class="nav-link" data-section="spotify">spotify</a></li>
+                        <li><a href="#todo" class="nav-link" data-section="todo">to-do list</a></li>
+                        <li><a href="#social" class="nav-link" data-section="social">find me</a></li>
+                        <li><a href="#credits" class="nav-link" data-section="credits">credits</a></li>
+                    </ul>
+                </div>
+            </nav>
 
-
-
-        </aside>
--->            
-        <main>
-            <div class="content">
-                <section class="welcome">
-                    <h1>welcome!</h1>
-                    <p>welcome to &w&/ette.wtf, my website to host all content created by me and my significant other...</p>
-                    <p>this site is subject to change...</p>
+            <main class="content-area">
+                <section id="welcome" class="content-section">
+                    <div class="welcome">
+                        <h1>welcome!</h1>
+                        <p>welcome to &w&/ette.wtf, my website to host all content created by me and my significant other...</p>
+                        <p>this site is subject to change...</p>
+                    </div>
                 </section>
 
-                <div class="content">
-                    <section class="welcome">
-                        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1861496802&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                            <a href="https://soundcloud.com/ettewtf" title="ette.wtf" target="_blank" style="color: #cccccc; text-decoration: none;">ette.wtf</a> · 
-                            <a href="https://soundcloud.com/ettewtf/sets/all" title="All" target="_blank" style="color: #cccccc; text-decoration: none;">All</a>
-                        </div>
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2laiv4886JvXklYl0nU0xQ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </section>
-                
-                    <div class="footer">
-                        <div class="to-do-list">
-                            <h2>to-do list</h2>
-                            <ul>
-                                <li>make ll-ette-rrs =,=</li>
-                                <li>make more music -,-</li>
-                                <li>remake about page =w=</li>
-                            </ul>
-                        </div>
-
-                        <div class="credits">
-                            <h2>credits</h2>
-                            <p>inspiration: aza...</p>
+                <section id="releases" class="content-section">
+                    <div class="latest-releases">
+                        <h2>
+                            <button class="collapse-btn" onclick="toggleReleases()" aria-expanded="true">
+                                latest releases <span class="collapse-icon">▼</span>
+                            </button>
+                        </h2>
+                        <div class="releases-content" id="releasesContent">
+                            <div class="release-item">
+                                <h3>i miss my kitte - Single</h3>
+                                <p class="release-date">May 7, 2025</p>
+                                <div class="release-links">
+                                    <a href="https://music.apple.com/ie/artist/ette-wtf/1762293425" target="_blank" rel="noopener" class="platform-link apple">Apple Music</a>
+                                    <a href="https://open.spotify.com/artist/4IgKMIaKd8DGpC2vtIbmrv" target="_blank" rel="noopener" class="platform-link spotify">Spotify</a>
+                                </div>
+                            </div>
+                            <div class="release-item">
+                                <h3>forest, act ii - Single</h3>
+                                <p class="release-date">2025</p>
+                                <div class="release-links">
+                                    <a href="https://music.apple.com/ie/artist/ette-wtf/1762293425" target="_blank" rel="noopener" class="platform-link apple">Apple Music</a>
+                                    <a href="https://open.spotify.com/artist/4IgKMIaKd8DGpC2vtIbmrv" target="_blank" rel="noopener" class="platform-link spotify">Spotify</a>
+                                </div>
+                            </div>
+                            <div class="release-item">
+                                <h3>ll-ette-rrs - Album</h3>
+                                <p class="release-date">2024</p>
+                                <p class="release-description">So Far, yet almost done!</p>
+                                <div class="release-links">
+                                    <a href="https://music.apple.com/ie/artist/ette-wtf/1762293425" target="_blank" rel="noopener" class="platform-link apple">Apple Music</a>
+                                    <a href="https://open.spotify.com/artist/4IgKMIaKd8DGpC2vtIbmrv" target="_blank" rel="noopener" class="platform-link spotify">Spotify</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </main>
+                </section>
+
+                <section id="soundcloud" class="content-section">
+                    <div class="music-player">
+                        <h2>soundcloud</h2>
+                        <iframe 
+                            width="100%" 
+                            height="300" 
+                            scrolling="no" 
+                            frameborder="no" 
+                            allow="autoplay" 
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1861496802&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                            title="SoundCloud Playlist - All"
+                            aria-label="SoundCloud music player">
+                        </iframe>
+                        <div class="soundcloud-attribution">
+                            <a href="https://soundcloud.com/ettewtf" title="ette.wtf" target="_blank" rel="noopener">ette.wtf</a> · 
+                            <a href="https://soundcloud.com/ettewtf/sets/all" title="All" target="_blank" rel="noopener">All</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="spotify" class="content-section">
+                    <div class="music-player">
+                        <h2>spotify</h2>
+                        <iframe 
+                            style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/album/2laiv4886JvXklYl0nU0xQ?utm_source=generator" 
+                            width="100%" 
+                            height="352" 
+                            frameBorder="0" 
+                            allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy"
+                            title="Spotify Album Player"
+                            aria-label="Spotify music player">
+                        </iframe>
+                    </div>
+                </section>
+
+                <section id="todo" class="content-section">
+                    <div class="to-do-list">
+                        <h2>to-do list</h2>
+                        <ul>
+                            <li>make ll-ette-rrs =,=</li>
+                            <li>make more music -,-</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="social" class="content-section">
+                    <div class="social-links">
+                        <h2>find me</h2>
+                        <div class="social-grid">
+                            <div class="social-item">
+                                <div class="social-icon" style="background-position: -32px 0px;"></div>
+                                <a href="https://music.apple.com/ie/artist/ette-wtf/1762293425" target="_blank" rel="noopener" class="social-link apple">Apple Music</a>
+                            </div>
+                            <div class="social-item">
+                                <div class="social-icon" style="background-position: -64px 0px;"></div>
+                                <a href="https://open.spotify.com/artist/4IgKMIaKd8DGpC2vtIbmrv" target="_blank" rel="noopener" class="social-link spotify">Spotify</a>
+                            </div>
+                            <div class="social-item">
+                                <div class="social-icon" style="background-position: 0px 0px;"></div>
+                                <a href="https://www.tiktok.com/@ette.wtf" target="_blank" rel="noopener" class="social-link tiktok">TikTok</a>
+                            </div>
+                            <div class="social-item">
+                                <div class="social-icon" style="background-position: -96px 0px;"></div>
+                                <a href="https://bsky.app/profile/ette.wtf" target="_blank" rel="noopener" class="social-link bluesky">Bluesky</a>
+                            </div>
+                            <div class="social-item">
+                                <div class="social-icon" style="background-position: -128px 0px;"></div>
+                                <a href="https://ko-fi.com/ettewtf" target="_blank" rel="noopener" class="social-link kofi">Ko-fi</a>
+                            </div>
+                            <div class="social-item">
+                                <div class="social-icon" style="background-position: -160px 0px;"></div>
+                                <a href="https://www.youtube.com/@ette_wtf/" target="_blank" rel="noopener" class="social-link youtube">YouTube</a>
+                            </div>
+                            <div class="social-item">
+                                <div class="social-icon" style="background-position: -192px 0px;"></div>
+                                <a href="https://www.twitch.tv/ette_wtf" target="_blank" rel="noopener" class="social-link twitch">Twitch</a>
+                            </div>
+                            <div class="social-item">
+                                <div class="social-icon" style="background-position: -224px 0px;"></div>
+                                <a href="https://github.com/ette-wtf" target="_blank" rel="noopener" class="social-link github">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="credits" class="content-section">
+                    <div class="credits">
+                        <h2>credits</h2>
+                        <p>inspiration: aza...</p>
+                    </div>
+                </section>
+            </main>
+        </div>
     </div>
 
-    <script src="change.js"></script> 
+    <script src="change.js"></script>
+    <script src="cabbit-easter-egg.js"></script>
+    <script>
+        function toggleReleases() {
+            const content = document.getElementById('releasesContent');
+            const button = document.querySelector('.collapse-btn');
+            const icon = button.querySelector('.collapse-icon');
+            
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                button.setAttribute('aria-expanded', 'true');
+                icon.textContent = '▼';
+            } else {
+                content.style.display = 'none';
+                button.setAttribute('aria-expanded', 'false');
+                icon.textContent = '▶';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.content-section');
+            let isScrolling = false;
+            let scrollTimeout;
+            let scrollThrottle;
+            
+            function throttledScrollHandler() {
+                if (scrollThrottle) return;
+                
+                scrollThrottle = setTimeout(() => {
+                    if (isScrolling) return;
+                    
+                    let current = '';
+                    const scrollPosition = window.pageYOffset + 100;
+                    
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        const sectionBottom = sectionTop + section.offsetHeight;
+                        
+                        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                            current = section.getAttribute('id');
+                        }
+                    });
+
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${current}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                    
+                    scrollThrottle = null;
+                }, 100);
+            }
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        isScrolling = true;
+                        
+                        const targetPosition = targetSection.offsetTop - 20;
+                        const startPosition = window.pageYOffset;
+                        const distance = targetPosition - startPosition;
+                        const duration = 800;
+                        let start = null;
+                        
+                        function animation(currentTime) {
+                            if (start === null) start = currentTime;
+                            const timeElapsed = currentTime - start;
+                            const run = easeInOutCubic(timeElapsed, startPosition, distance, duration);
+                            window.scrollTo(0, run);
+                            if (timeElapsed < duration) {
+                                requestAnimationFrame(animation);
+                            } else {
+                                isScrolling = false;
+                            }
+                        }
+                        
+                        requestAnimationFrame(animation);
+                        
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            function easeInOutCubic(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t * t + b;
+                t -= 2;
+                return c / 2 * (t * t * t + 2) + b;
+            }
+
+            window.addEventListener('scroll', throttledScrollHandler, { passive: true });
+        });
+    </script>
 </body>
 </html>
